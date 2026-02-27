@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Addition in JS</title>
+</head>
+
+<body>
+
+    <p><a href="register.html">&larr; Back to Register</a></p>
+
+    <h2>Simple Addition</h2>
+
+    <input type="number" id="num1" placeholder="Enter first number">
+    <br><br>
+
+    <input type="number" id="num2" placeholder="Enter second number">
+    <br><br>
+
+    <button onclick="addNumbers()">Add</button>
+
+    <h3 id="result">Result: </h3>
+
+    <script>
+        function addNumbers() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+
+            if (document.getElementById("num1").value === "" || document.getElementById("num2").value === "") {
+                alert("⚠️ Invalid Input! Please enter both numbers.");
+                return;
+            }
+
+            let sum = a + b;
+            document.getElementById("result").innerText = "Result: " + sum;
+        }
+    </script>
+
+</body>
+
+</html>
